@@ -1,8 +1,12 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
+// Components
+import ClientOnly from '@/components/ClientOnly'
+import Navbar from '@/components/navbar'
+import NavbarMenu from '@/components/modals/NavbarMenuModal'
 
 export const metadata = {
-  title: 'Mucahit',
+  title: 'Mucahit | Stealim',
   description: 'Mucahit tasan portfolio website',
 }
 
@@ -20,8 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/image/favicon.png" />
+      </head>
       <body className={poppins.className}>
-        {children}
+        <ClientOnly>
+          <Navbar />
+          <NavbarMenu />
+        </ClientOnly>
+        <div className='pt-16'>
+          {children}
+        </div>
       </body>
     </html>
   )
