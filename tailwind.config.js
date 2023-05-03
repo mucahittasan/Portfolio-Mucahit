@@ -9,16 +9,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        darkGradientBg: 'linear-gradient(135deg,#08070b, #161618)',
+        whiteGradientBg: 'linear-gradient(135deg,#f1f1f1, #fafafa)',
       },
       colors: {
         darkBackground: "#131313",
         darkText: "#f1f1f1",
         whiteBackground: "#ededed",
         whiteText: "#131313",
-        hoverText: "#C687EB"
+        hoverText: "#C687EB",
+        blueColor: "#81D6FF",
+        pinkColor: "#E781FC",
+        gradientLeft: "#81D6FF",
+        gradientRight: "#E781FC"
       }
     },
   },

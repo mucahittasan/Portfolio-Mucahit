@@ -1,3 +1,4 @@
+
 import Link from 'next/link'
 import { Orbitron } from 'next/font/google'
 
@@ -14,7 +15,7 @@ const Logo = () => {
                 alt='Logo'
                 src="/image/favicon.png"
             />
-            <div className={`font-bold ${orbitron.className}`}>Mucahit Tasan</div>
+            <div className={`font-bold ${orbitron.className}`}>Mucahit | Stealim</div>
         </Link>
     )
 }
