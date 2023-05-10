@@ -11,6 +11,11 @@ module.exports = {
       backgroundImage: {
         darkGradientBg: 'linear-gradient(135deg,#08070b, #161618)',
         whiteGradientBg: 'linear-gradient(135deg,#f1f1f1, #fafafa)',
+        colorfulGradientBg: "linear-gradient(135deg,#81D6FF, #E781FC)",
+      },
+      fontFamily: {
+        poppins: "var(--font-poppins)",
+        orbitron: "var(--font-orbitron)",
       },
       colors: {
         darkBackground: "#131313",
@@ -20,8 +25,8 @@ module.exports = {
         hoverText: "#C687EB",
         blueColor: "#81D6FF",
         pinkColor: "#E781FC",
-        gradientLeft: "#81D6FF",
-        gradientRight: "#E781FC"
+        darkBlue: "#4587a8",
+        darkPink: "#9a49aa"
       }
     },
   },

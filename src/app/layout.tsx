@@ -1,13 +1,18 @@
 import './globals.css'
+
 import { Poppins } from 'next/font/google'
+import { Orbitron } from 'next/font/google'
+
 // Components
 import ClientOnly from '@/components/ClientOnly'
 import Navbar from '@/components/navbar'
 import NavbarMenu from '@/components/modals/NavbarMenuModal'
+import Container from '@/components/Container'
+import Footer from '@/components/footer'
 
 export const metadata = {
-  title: 'Mucahit | Stealim',
-  description: 'Mucahit tasan portfolio website',
+  title: 'Mucahit | Home',
+  description: 'Mucahit tasan portfolio home page',
 }
 
 const poppins = Poppins({
@@ -16,6 +21,12 @@ const poppins = Poppins({
   variable: "--font-poppins"
 })
 
+
+const orbitron = Orbitron({
+  weight: ['400', '500', '600', '700', '800', '900'],
+  subsets: ["latin"],
+  variable: "--font-orbitron"
+})
 
 export default function RootLayout({
   children,
@@ -27,14 +38,15 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/image/favicon.png" />
       </head>
-      <body className={poppins.className}>
+      <body className={`${poppins.className} ${orbitron.variable}`}>
         <ClientOnly>
           <Navbar />
           <NavbarMenu />
         </ClientOnly>
-        <div className='pt-16 min-h-screen'>
+        <Container className='pt-16 min-h-screen flex flex-col'>
           {children}
-        </div>
+          <Footer />
+        </Container>
       </body>
     </html>
   )

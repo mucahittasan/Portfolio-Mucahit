@@ -16,13 +16,23 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.12.7",
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^7.2.0",
+    "moment": "^2.29.4",
     "next": "13.3.0",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "reading-time": "^1.5.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4",
     "zustand": "^4.3.7"
+  },
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
   }
 }

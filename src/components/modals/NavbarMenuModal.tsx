@@ -2,33 +2,28 @@
 
 import useToggleMenu from "@/hooks/useToggleMenu"
 import Link from "next/link";
-import { IoClose } from 'react-icons/io5'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
 const NavbarMenu = () => {
 
     const toggleMenu = useToggleMenu();
+    const activeSegment = useSelectedLayoutSegment();
 
     return (
-        <div className={`fixed left-0 top-0 w-full h-full flex items-center justify-center transition-all duration-500
-        ${toggleMenu.isOpen ? "translate-x-0 bg-darkBackground/90" : "translate-x-[200%] "}`}>
+        <div className={`w-36 h-auto shadow-md min-h-[120px] origin-top-right absolute flex flex-col justify-center right-4 top-[74px] z-[999] transition-all duration-500 rounded-md
+        ${toggleMenu.isOpen ? "scale-100 dark:bg-[#1b1b1b] bg-[#fafafa]" : "scale-0 "}`}>
+            <div className="relative flex items-center justify-center h-full">
 
-            <button
-                className="absolute right-14 top-14 text-white text-2xl"
-                onClick={toggleMenu.onClose}>
-                <IoClose />
-            </button>
+                <ul className="flex flex-col gap-y-4 items-center h-full justify-center w-full px-4 py-4 pt-0">
+                    <li className={` w-full ${toggleMenu.isOpen ? "translate-y-0 opacity-[1]" : "opacity-0 translate-y-[20px]"}`}>
+                        <Link className={`navbar-item w-full flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "blog" && "before:w-full before:bg-blueColor"}`} href="/blog">Blog</Link>
+                    </li>
+                    <li className={` w-full ${toggleMenu.isOpen ? "translate-y-0 opacity-[1] " : "opacity-0 translate-y-[20px]"}`}>
+                        <Link className={`navbar-item w-full flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "projects" && "before:w-full before:bg-blueColor"}`} href="/projects">Projects</Link>
+                    </li>
+                </ul>
 
-            <ul className="flex flex-col gap-y-12 items-center">
-                <li className={`duration-300 ${toggleMenu.isOpen ? "translate-y-0 opacity-[1] delay-700" : "opacity-0 translate-y-[20px]"}`}>
-                    <Link className="navbar-item text-2xl dark:text-white" href="/">Blog</Link>
-                </li>
-                <li className={`duration-300 ${toggleMenu.isOpen ? "translate-y-0 opacity-[1] delay-[800ms]" : "opacity-0 translate-y-[20px]"}`}>
-                    <Link className="navbar-item text-2xl dark:text-white" href="/">Projects</Link>
-                </li>
-                <li className={`duration-300 ${toggleMenu.isOpen ? "translate-y-0 opacity-[1] delay-[900ms]" : "opacity-0 translate-y-[20px]"}`}>
-                    <Link className="navbar-item text-2xl dark:text-white" href="/">Contact</Link>
-                </li>
-            </ul>
+            </div>
         </div>
     )
 }
