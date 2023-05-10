@@ -58,5 +58,5 @@
   .primary-title-dark {
     @apply bg-gradient-to-r from-darkBlue to-darkPink inline-block text-transparent bg-clip-text min-h-[60px]
   }
-
+  
 }

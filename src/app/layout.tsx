@@ -6,7 +6,6 @@ import { Orbitron } from 'next/font/google'
 // Components
 import ClientOnly from '@/components/ClientOnly'
 import Navbar from '@/components/navbar'
-import NavbarMenu from '@/components/modals/NavbarMenuModal'
 import Container from '@/components/Container'
 import Footer from '@/components/footer'
 
@@ -41,7 +40,6 @@ export default function RootLayout({
       <body className={`${poppins.className} ${orbitron.variable}`}>
         <ClientOnly>
           <Navbar />
-          <NavbarMenu />
         </ClientOnly>
         <Container className='pt-16 min-h-screen flex flex-col'>
           {children}
