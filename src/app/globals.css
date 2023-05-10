@@ -10,7 +10,15 @@
   
   ::selection {
     @apply bg-pinkColor text-darkText 
-}
+  }
+
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+      @apply bg-gradient-to-t from-pinkColor to-transparent
+  }
 
   .navbar-item {
     @apply font-semibold p-2 text-darkText transition dark:text-whiteText relative before:absolute

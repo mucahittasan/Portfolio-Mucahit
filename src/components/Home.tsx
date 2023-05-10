@@ -9,9 +9,8 @@ import animationData from '../../public/animations/coderr.json';
 const HomePage = () => {
 
 
-
     return (
-        <div className="my-16">
+        <div className="mt-16">
 
             <div className="flex flex-col items-start">
                 <h2 className="home-title gradient-text ">Hi, I&apos;m Mucahit Tasan</h2>

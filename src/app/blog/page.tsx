@@ -1,3 +1,4 @@
+import BlogList from '@/components/blog/BlogList'
 import React from 'react'
 
 export const metadata = {
@@ -7,7 +8,9 @@ export const metadata = {
 
 const Blog = () => {
     return (
-        <div>Blog</div>
+        <div className='mt-20'>
+            <BlogList />
+        </div>
     )
 }
 
