@@ -12,7 +12,7 @@ import { IoTimeOutline } from 'react-icons/io5';
 const BlogDetail = (props: any) => {
 
     const blogTitle = props.params.blogTitle;
-    // const blogContent = getBlogDetail(blogTitle);
+    const blogContent = getBlogDetail(blogTitle);
 
     // const contentReadingTime = readingTime(blogContent.content)
 
@@ -34,7 +34,7 @@ const BlogDetail = (props: any) => {
 
                 </header> */}
                 <article className='prose prose-zinc prose-pre:dark:bg-white prose-pre:dark:text-whiteText prose-strong:text-darkText dark:prose-strong:text-whiteText lg:prose-xl text-gray-300 dark:text-gray-600 prose-headings:text-white dark:prose-headings:text-whiteText prose-a:text-white dark:prose-a:text-whiteText prose-blockquote:text-gray-300 dark:prose-blockquote:text-gray-600 prose-li:text-white dark:prose-li:text-whiteText prose-li:font-medium prose-a:font-semibold marker:text-white dark:marker:text-whiteText !text-base max-w-full'>
-                    {/* <Markdown className="markdown-content">{blogContent.content}</Markdown> */}
+                    <Markdown className="markdown-content">{blogContent.content}</Markdown>
                 </article>
             </section>
         </>
