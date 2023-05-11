@@ -1,15 +1,14 @@
-"use client"
 
 import { FC, ReactNode } from "react"
 
 interface ContainerProps {
     children: ReactNode;
-    className: string;
+    className?: string;
 }
 
 const Container: FC<ContainerProps> = ({ children, className }) => {
     return (
-        <div className={`max-w-5xl mx-auto xl:px-20 md:px-10 sm:px-2 px-4 ${className}`}>
+        <div className={`max-w-4xl mx-auto md:px-20 px-4 h-full ${className}`}>
             {children}
         </div>
     )

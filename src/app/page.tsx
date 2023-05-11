@@ -1,6 +1,13 @@
 
+import HomePage from '../components/Home';
+
 export default function Home() {
+
   return (
-    <h1 className='text-2xl font-semibold'></h1>
+    <section>
+      <HomePage />
+    </section>
+
+
   )
 }

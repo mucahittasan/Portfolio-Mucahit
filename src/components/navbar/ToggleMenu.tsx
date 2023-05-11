@@ -13,7 +13,7 @@ const ToggleMenu = () => {
 
             <ToggleDarkMode />
             <button
-                onClick={() => toggleMenu.onOpen()}
+                onClick={() => toggleMenu.toggleShow()}
                 className='text-[26px] text-whiteText transition-all md:hidden w-9 h-9 rounded-lg dark:bg-[#1f1f1f] dark:text-darkText dark:hover:bg- bg-whiteBackground hover:bg-[#d3d2d2] flex items-center justify-center'
             >
                 <HiMenu />

@@ -2,14 +2,14 @@ import { create } from "zustand";
 
 interface ToggleMenuStore {
     isOpen: boolean;
-    onOpen: () => void;
+    toggleShow: () => void;
     onClose: () => void;
 }
 
 const useToggleMenu = create<ToggleMenuStore>((set) => ({
     isOpen: false,
-    onOpen: () => set({ isOpen: true }),
-    onClose: () => set({ isOpen: false })
+    toggleShow: () => set((state) => ({ isOpen: !state.isOpen })),
+    onClose: () => set(() => ({ isOpen: false }))
 }));
 
 export default useToggleMenu;

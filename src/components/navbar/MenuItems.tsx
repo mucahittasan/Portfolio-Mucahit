@@ -1,21 +1,36 @@
+"use client"
 
 import Link from 'next/link'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
-const MenuItem = () => {
+export type Links = {
+    label: string,
+    path: string,
+    targetSegment: string
+}[]
+
+const links: Links = [
+    { label: "Blog", path: "/blog", targetSegment: "blog" },
+    { label: "Projects", path: "/projects", targetSegment: "projects" },
+]
+
+
+const MenuItems = () => {
+
+    const activeSegment = useSelectedLayoutSegment();
+
 
     return (
-        <ul className={`gap-x-8 hidden md:flex`}>
-            <li>
-                <Link className='navbar-item' href="/">Blog</Link>
-            </li>
-            <li>
-                <Link className='navbar-item' href="/">Projects</Link>
-            </li>
-            <li>
-                <Link className='navbar-item' href="/">Contact</Link>
-            </li>
-        </ul>
+        <nav>
+            <ul className={`gap-x-8 hidden md:flex`}>
+                {links.map((link) => (
+                    <li key={link.label}>
+                        <Link className={`navbar-item ${activeSegment === link.targetSegment && "before:w-full before:bg-blueColor"}`} href={link.path}>{link.label}</Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     )
 }
 
-export default MenuItem
+export default MenuItems

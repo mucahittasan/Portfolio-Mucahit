@@ -3,18 +3,76 @@
 @tailwind utilities;
 
 @layer base {
-  html, body {
-    height: 100%;
-  }
 
   body {
-    @apply bg-darkBackground text-white dark:bg-whiteBackground dark:text-whiteText transition
+    @apply bg-darkGradientBg text-white dark:bg-whiteGradientBg dark:text-whiteText transition cursor-auto overflow-x-hidden
   }
   
+  ::selection {
+    @apply bg-pinkColor text-darkText 
+  }
+
+  body::-webkit-scrollbar{
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+      @apply bg-gradient-to-t from-pinkColor to-transparent
+  }
+
   .navbar-item {
     @apply font-semibold p-2 text-darkText transition dark:text-whiteText relative before:absolute
-    before:bottom-0 before:left-0 before:w-6 before:h-[2px] before:bg-gradient-to-r before:from-hoverText hover:text-white
-    before:to-transparent hover:before:bg-violet-500 before:transition-all before:duration-300 hover:before:w-full
+    before:bottom-0 before:left-0 before:w-6 before:rounded-2xl before:h-[2px] before:bg-gradient-to-r before:from-pinkColor hover:text-white
+    before:to-transparent hover:before:bg-blueColor before:transition-all before:duration-300 hover:before:w-full
+  }
+
+  .home-title {
+    @apply font-bold mb-12 text-[2rem] md:text-5xl lg:text-6xl w-full sm:text-start text-center font-poppins
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blueColor to-pinkColor inline-block text-transparent bg-clip-text
+  }
+
+  .gradient-dark-text {
+    @apply bg-gradient-to-r from-darkBlue to-darkPink inline-block text-transparent bg-clip-text
+  }
+
+  .home-paragraph {
+    @apply md:text-base lg:text-lg font-semibold text-gray-400 dark:text-gray-600 w-full
+  }
+
+  .home-paragraph span:not(:first-child) {
+    @apply text-white sm:text-start text-center font-bold dark:text-whiteText
+  }
+
+  .btn {
+    @apply text-center font-bold text-darkText flex items-center gap-2 py-2 px-8 outline-none
+  }
+
+  .btn-primary {
+    @apply rounded-md transition-all hover:scale-105 bg-gradient-to-br from-darkBlue to-darkPink
+     text-darkText dark:from-[#131313] dark:to-[#474747] dark:bg-gradient-to-l
+  }
+
+  .primary-title {
+    @apply font-bold md:text-5xl text-4xl  relative
+  }
+
+  .primary-title h3:first-child{
+    @apply absolute whitespace-nowrap blur-[2px] md:-top-6 -top-1 -left-4 md:-left-8 opacity-[0.1] pointer-events-none md:text-[5rem] sm:text-[4rem] text-[3rem]
+  } 
+
+  .primary-title-dark {
+    @apply bg-gradient-to-r from-darkBlue to-darkPink inline-block text-transparent bg-clip-text min-h-[60px]
+  }
+  
+  p code {
+    @apply !text-white bg-gray-500
+  }
+
+  .technologies span:last-child span {
+    display: none;
   }
 
 }

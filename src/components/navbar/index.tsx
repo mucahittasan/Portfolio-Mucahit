@@ -1,18 +1,20 @@
 // Components
 import Container from '../Container'
+import NavbarMenuModal from '../modals/NavbarMenuModal'
 import Logo from './Logo'
-import MenuItem from './MenuItems'
+import MenuItems from './MenuItems'
 import ToggleMenu from './ToggleMenu'
 
 const Navbar = () => {
     return (
-        <div className='fixed w-full bg-darkBackground backdrop-blur dark:bg-[#f1f1f1] transition'>
-            <Container className='flex items-center py-4 justify-between'>
+        <header className='fixed w-full backdrop-blur transition z-[999]'>
+            <Container className='flex items-center py-4 justify-between relatıve'>
                 <Logo />
-                <MenuItem />
+                <MenuItems />
                 <ToggleMenu />
+                <NavbarMenuModal />
             </Container>
-        </div>
+        </header>
     )
 }
 
