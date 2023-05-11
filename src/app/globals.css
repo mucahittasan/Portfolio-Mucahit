@@ -56,11 +56,11 @@
   }
 
   .primary-title {
-    @apply font-bold md:text-5xl sm:text-4xl text-3xl relative
+    @apply font-bold md:text-5xl text-4xl  relative
   }
 
   .primary-title h3:first-child{
-    @apply absolute whitespace-nowrap blur-[2px] md:-top-6 sm:-top-2 -top-1 -left-4 md:-left-8 opacity-[0.1] pointer-events-none md:text-[5rem] sm:text-[4rem] text-[3rem]
+    @apply absolute whitespace-nowrap blur-[2px] md:-top-6 -top-1 -left-4 md:-left-8 opacity-[0.1] pointer-events-none md:text-[5rem] sm:text-[4rem] text-[3rem]
   } 
 
   .primary-title-dark {

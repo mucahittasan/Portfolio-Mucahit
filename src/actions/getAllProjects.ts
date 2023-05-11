@@ -6,6 +6,7 @@ export interface ProjectsLists {
     description: string;
     image: string;
     source: string;
+    demo: string;
     technologies: string[];
 }
 

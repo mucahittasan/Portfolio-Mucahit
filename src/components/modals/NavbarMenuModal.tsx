@@ -16,10 +16,10 @@ const NavbarMenuModal = () => {
 
                 <ul className="flex flex-col gap-y-4 items-center h-full justify-center w-full px-4 py-4 pt-0">
                     <li className={` w-full ${toggleMenu.isOpen ? "translate-y-0 opacity-[1]" : "opacity-0 translate-y-[20px]"}`}>
-                        <Link className={`navbar-item w-full before:from-darkPink flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "blog" && "before:w-full before:bg-darkBlue"}`} href="/blog">Blog</Link>
+                        <Link onClick={() => toggleMenu.onClose()} className={`navbar-item w-full before:from-darkPink flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "blog" && "before:w-full before:bg-darkBlue"}`} href="/blog">Blog</Link>
                     </li>
                     <li className={` w-full ${toggleMenu.isOpen ? "translate-y-0 opacity-[1] " : "opacity-0 translate-y-[20px]"}`}>
-                        <Link className={`navbar-item w-full before:from-darkPink flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "projects" && "before:w-full before:bg-darkBlue"}`} href="/projects">Projects</Link>
+                        <Link onClick={() => toggleMenu.onClose()} className={`navbar-item w-full before:from-darkPink flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${activeSegment === "projects" && "before:w-full before:bg-darkBlue"}`} href="/projects">Projects</Link>
                     </li>
                 </ul>
 
