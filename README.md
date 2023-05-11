@@ -1,15 +1,15 @@
-<h1 align="center"> E Commerce | Stealim </h1>
+<h1 align="center"> Mucahit | Stealim </h1>
 
 <div align="center">
   
-  <a href="https://e-commerce-app-alpha-brown.vercel.app/" target="_blank">↪️ Demo</a>
+  <a href="https://mucahit-tasan.vercel.app/" target="_blank">↪️ Demo</a>
   <br />
   <br />
-  
+
 </div> 
 
 <div align="center">
-  <img width="900" src = 'https://user-images.githubusercontent.com/88967412/230664359-dfa1a324-333e-46ba-b28e-54b724b108af.gif' />
+  <img width="900" src = 'https://github.com/mucahittasan/Portfolio-Mucahit/assets/88967412/e047cadd-e4b4-4540-a549-85cd9e2327a3' />
 </div>
 
 <h2> ✨ About The Project</h2>
