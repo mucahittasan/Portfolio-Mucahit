@@ -40,8 +40,8 @@ const HomePage = () => {
                         <span>Resume</span>
                     </Link>
                     <div className="flex items-center justify-end text-3xl gap-x-1 ml-8">
-                        <Link href={"https://github.com/mucahittasan"} target="_blank" className="p-2 hover:text-[#d1d1d1] transition-all duration-200"><AiFillGithub /></Link>
-                        <Link href={"https://linkedin.com/in/mucahittasan"} target="_blank" className="p-2 hover:text-[#d1d1d1] transition-all duration-200"><AiFillLinkedin /></Link>
+                        <Link href={"https://github.com/mucahittasan"} target="_blank" className="p-2 hover:text-[#d1d1d1] dark:hover:text-[#353535] transition-all duration-200"><AiFillGithub /></Link>
+                        <Link href={"https://linkedin.com/in/mucahittasan"} target="_blank" className="p-2 hover:text-[#d1d1d1] dark:hover:text-[#353535] transition-all duration-200"><AiFillLinkedin /></Link>
                     </div>
                 </div>
                 <Lottie
