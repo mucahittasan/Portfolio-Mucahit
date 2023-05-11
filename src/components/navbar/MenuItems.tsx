@@ -19,7 +19,6 @@ const MenuItems = () => {
 
     const activeSegment = useSelectedLayoutSegment();
 
-
     return (
         <nav>
             <ul className={`gap-x-8 hidden md:flex`}>
