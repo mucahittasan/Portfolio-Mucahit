@@ -10,6 +10,7 @@ export type Links = {
 }[]
 
 const links: Links = [
+    { label: "Blog", path: "/blog", targetSegment: "blog" },
     { label: "Projects", path: "/projects", targetSegment: "projects" },
 ]
 

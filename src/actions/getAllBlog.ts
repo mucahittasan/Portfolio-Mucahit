@@ -10,12 +10,12 @@ export interface PostMetadata {
 }
 
 export const getAllBlog = (): PostMetadata[] => {
-    const files = fs.readdirSync("public/posts/");
+    const files = fs.readdirSync("./src/pages/blog/");
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
     // Get gray-matter data from each file.
     const posts = markdownPosts.map((fileName) => {
-        const fileContents = fs.readFileSync(`public/posts/${fileName}`, "utf-8");
+        const fileContents = fs.readFileSync(`./src/pages/blog/${fileName}`, "utf-8");
         const matterResult = matter(fileContents);
 
         return {
