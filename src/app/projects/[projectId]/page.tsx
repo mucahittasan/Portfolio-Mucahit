@@ -1,4 +1,5 @@
 import getProjectDetail from '@/actions/getProjectDetail';
+import EmptyState from '@/components/EmptyState';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
@@ -13,12 +14,12 @@ const ProjectDetail = (props: any) => {
 
     if (!currentProject) {
         return (
-            <div>There is no item!</div>
+            <EmptyState title='There is no any project!' subtitle='You can go back to see other projects.' />
         )
     }
 
     return (
-        <div className='my-20'>
+        <section className='my-20'>
             <div className='mb-12'>
                 <h2 className='text-center w-full text-4xl dark:gradient-dark-text gradient-text font-bold'>{currentProject.title}</h2>
                 <div className='flex flex-wrap mt-2 justify-center  dark:text-gray-700 text-gray-300 font-medium text-sm technologies'>
@@ -47,7 +48,7 @@ const ProjectDetail = (props: any) => {
                     <span>Demo</span>
                 </Link>
             </div>
-        </div>
+        </section>
     )
 }
 
