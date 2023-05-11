@@ -2,7 +2,7 @@
 import readingTime from "reading-time";
 
 import { getAllBlog } from "@/actions/getAllBlog"
-import getBlogDetail from "@/actions/getBlogDetail";
+import { getBlogDetail } from "@/actions/getBlogDetail";
 
 
 import BlogCard from "./BlogCard";
