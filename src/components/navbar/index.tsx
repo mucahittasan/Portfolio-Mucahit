@@ -7,7 +7,7 @@ import ToggleMenu from './ToggleMenu'
 
 const Navbar = () => {
     return (
-        <header className='fixed w-full backdrop-blur transition'>
+        <header className='fixed w-full backdrop-blur transition z-[999]'>
             <Container className='flex items-center py-4 justify-between relatıve'>
                 <Logo />
                 <MenuItems />

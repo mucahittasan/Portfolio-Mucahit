@@ -17,9 +17,9 @@ interface BlogCardProps {
 const BlogCard: FC<BlogCardProps> = ({ blog, time }) => {
     return (
         <Link href={`/blog/${blog.slug}`}>
-            <div className="relative w-full h-48 rounded-lg overflow-hidden group md:max-w-none max-w-[370px]">
+            <div className="relative w-full rounded-lg overflow-hidden group md:max-w-none md:h-[200px]">
                 <Image
-                    className="object-cover transition-all duration-200 group-hover:scale-110 "
+                    className="object-cover transition-all !relative duration-200 group-hover:scale-110 h-full"
                     fill
                     alt={blog.title}
                     src={blog.cover_image}
