@@ -14,7 +14,7 @@ const BlogDetail = (props: any) => {
     const blogTitle = props.params.blogTitle;
     const blogContent = getBlogDetail(blogTitle);
 
-    const contentReadingTime = readingTime(blogContent?.content)
+    const contentReadingTime = readingTime(blogContent.content)
 
     return (
         <>
