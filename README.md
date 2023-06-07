@@ -10,6 +10,7 @@
 
 <div align="center">
   <img width="900" src = 'https://github.com/mucahittasan/Portfolio-Mucahit/assets/88967412/e047cadd-e4b4-4540-a549-85cd9e2327a3' />
+   <img width="900" src = 'https://github.com/mucahittasan/Portfolio-Mucahit/assets/88967412/18948126-faca-4ac8-8e0b-c7056578774f' />
 </div>
 
 <h2> ✨ About The Project</h2>
