@@ -16,6 +16,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
                     fill
                     alt={project.title}
                     src={project.image}
+                    loading='lazy'
                 />
             </div>
             <h3 className='mt-4 text-xl font-bold group-hover:gradient-text transition-all duration-200'>{project.title}</h3>
