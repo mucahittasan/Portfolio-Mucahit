@@ -33,7 +33,7 @@ const HomePage = () => {
                 <div className="flex items-center mt-12">
                     <Link
                         className=" btn btn-primary"
-                        href="https://drive.google.com/file/d/1XvMKXGsHce2lF6eHSpCA7V6-t4b71cng/view?usp=sharing"
+                        href="https://drive.google.com/file/d/14LqGWYO58L6WdOO53F87aS_GW57F5dCY/view?usp=sharing"
                         target="_blank"
                     >
                         <HiCursorClick />
