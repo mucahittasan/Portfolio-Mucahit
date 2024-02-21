@@ -1,12 +1,11 @@
-import ProjectsLists from '@/components/project/ProjectsLists'
-import React from 'react'
+import ProjectsLists from '@/components/cards/ProjectsLists'
 
 const Projects = () => {
-    return (
-        <div>
-            <ProjectsLists />
-        </div>
-    )
+  return (
+    <div>
+      <ProjectsLists />
+    </div>
+  )
 }
 
 export default Projects
