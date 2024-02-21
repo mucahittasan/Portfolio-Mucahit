@@ -33,8 +33,11 @@ const ExperienceCard = ({ item }: { item: Experience }) => {
         Technologies
       </h4>
       <p className="md:ml-10 mt-4">
-        {item.technologies.map((item) => (
-          <span className="font-medium text-gray-400 dark:text-gray-500">
+        {item.technologies.map((item, i) => (
+          <span
+            key={i}
+            className="font-medium text-gray-400 dark:text-gray-500"
+          >
             {item} |{' '}
           </span>
         ))}

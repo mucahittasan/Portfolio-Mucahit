@@ -12,7 +12,7 @@ const ExperiencePage = () => {
         {experiences.map((item, index) => (
           <ExperienceCard
             item={item}
-            key={index}
+            key={item.company_name}
           />
         ))}
       </div>
