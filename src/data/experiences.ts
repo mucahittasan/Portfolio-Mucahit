@@ -13,37 +13,6 @@ export type Experience = {
 export const experiences = [
   {
     job_title: 'Frontend Sofwtare Engineer',
-    company_name: 'Kedi Games',
-    technologies: ['React.js', 'Scss', 'Node.js', 'MongoDB', 'Figma', 'Spline'],
-    about_job: [
-      'The process of transferring the design made in Figma to the React.js code',
-      'Preparation of the admin panel to keep the news data and communication channel',
-      'I prepared the 3d animations that the website needs with spline and transferred them to the react project.',
-    ],
-    work_time: {
-      start: 'November 2022',
-      end: 'May 2023',
-      total: '6 Month',
-    },
-  },
-  {
-    job_title: 'Frontend Sofwtare Engineer',
-    company_name: 'Educational Networks',
-    technologies: ['Html', 'Css', 'Javascript', 'Photoshop'],
-    about_job: [
-      'I honed my skills in developing user-friendly school websites using pure CSS, HTML, and JavaScript',
-      'Developing the responsive part of Web Sites from start to finish',
-      'Making the necessary arrangements in the pictures with Photoshop and converting them from photoshop to html',
-      'I gained experience in accessibility and UX design during my time there',
-    ],
-    work_time: {
-      start: 'June 2022',
-      end: 'October 2023',
-      total: '1.7 Years',
-    },
-  },
-  {
-    job_title: 'Frontend Sofwtare Engineer',
     company_name: '777 Sense Labs',
     technologies: [
       'React.js',
@@ -64,6 +33,37 @@ export const experiences = [
     work_time: {
       start: 'November 2023',
       end: 'Present',
+    },
+  },
+  {
+    job_title: 'Frontend Sofwtare Engineer',
+    company_name: 'Educational Networks',
+    technologies: ['Html', 'Css', 'Javascript', 'Photoshop'],
+    about_job: [
+      'I honed my skills in developing user-friendly school websites using pure CSS, HTML, and JavaScript',
+      'Developing the responsive part of Web Sites from start to finish',
+      'Making the necessary arrangements in the pictures with Photoshop and converting them from photoshop to html',
+      'I gained experience in accessibility and UX design during my time there',
+    ],
+    work_time: {
+      start: 'June 2022',
+      end: 'October 2023',
+      total: '1.7 Years',
+    },
+  },
+  {
+    job_title: 'Frontend Sofwtare Engineer',
+    company_name: 'Kedi Games',
+    technologies: ['React.js', 'Scss', 'Node.js', 'MongoDB', 'Figma', 'Spline'],
+    about_job: [
+      'The process of transferring the design made in Figma to the React.js code',
+      'Preparation of the admin panel to keep the news data and communication channel',
+      'I prepared the 3d animations that the website needs with spline and transferred them to the react project.',
+    ],
+    work_time: {
+      start: 'November 2022',
+      end: 'May 2023',
+      total: '6 Month',
     },
   },
 ]
