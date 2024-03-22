@@ -1,6 +1,27 @@
 export const projects = [
   {
     id: 0,
+    title: 'Job Finding App',
+    description: '',
+    image:
+      'https://github.com/mucahittasan/Job-Finding-App/assets/88967412/9379de4b-c15a-4615-a275-ffe26465c95a',
+    source: 'https://github.com/mucahittasan/Job-Finding-App',
+    demo: 'https://job-finding-app-mucahit.vercel.app/',
+    technologies: [
+      'Next.js',
+      'Typescript',
+      'React Hook Form',
+      'React Query',
+      'Zustand',
+      'Js Cookie',
+      'Framer Motion',
+      'Tailwindcss',
+      'Zod',
+    ],
+    date: 'March 22, 2024',
+  },
+  {
+    id: 1,
     title: 'Threads App',
     description:
       'Threads App is a modern, responsive web application crafted using cutting-edge technologies. Developed with Next.js, TypeScript, Tailwind CSS, Clerk, Webhook, Zod, UploadThing, and MongoDB, this application stands out with its user-friendly interface and functionality.',
@@ -18,9 +39,10 @@ export const projects = [
       'Zod',
       'MongoDB',
     ],
+    date: 'Jan 20, 2024',
   },
   {
-    id: 1,
+    id: 2,
     title: 'E Commerce',
     description:
       'In this project, I wanted to use the react and redux toolkit, which I always use, together with typescript, and I wanted to make an e-commerce application using them. In this project, I tried to do operations such as listing products, seeing product details, adding/removing to cart, adding/removing to favorites, searching for products, ordering the products in the basket. My project is fully responsive, I hope you like it :)',
@@ -36,9 +58,10 @@ export const projects = [
       'Node.js',
       'MongoDB',
     ],
+    date: 'Jun 06, 2023',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Airbnb Clone',
     description:
       "I made an airbnb project with 'Code with antonio'. How to use modals in general in my project, how to use nextjs and prisma together, how to use nextAuth package of nextjs, how to signIn with github or google, how to use nextjs together with typescript, how to optimize operations such as map and calendar and integrate them into the project. I've worked with things and I think it's a pretty cool project.",
@@ -53,9 +76,10 @@ export const projects = [
       'Prisma',
       'NextAuth',
     ],
+    date: 'May 1, 2023',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Twitter Clone',
     description:
       'In this project, i made a twitter clone app. I tried to emulate exactly like twitter and i think i made it. In this app, you can login, signup, logout, share post, delete post, comment to post and more things. I hope you like this project. ',
@@ -70,9 +94,10 @@ export const projects = [
       'Formik',
       'Scss',
     ],
+    date: 'May 2, 2023',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Example Portfolio',
     description:
       'I made this project to introduce myself, to show the talents I have, to introduce the projects I have done, and to make it easy for people to know about me. I have done it so that they can have knowledge in a way.',
@@ -81,9 +106,10 @@ export const projects = [
     source: 'https://github.com/mucahittasan/Personal-Website-Example',
     demo: 'https://mucahittasan.vercel.app/',
     technologies: ['React.js', 'CSS (Scss)'],
+    date: 'May 5, 2022',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Weather App',
     description:
       'In this project I worked with React, I used the openweather API and using the axios library, I tried to show the 3-day weather condition of that city according to the city name that the user entered in the input, according to the data from the API',
@@ -92,9 +118,10 @@ export const projects = [
     source: 'https://github.com/mucahittasan/React-Weather-App',
     demo: 'https://fastidious-kulfi-5a6929.netlify.app/',
     technologies: ['React.js', 'ContextApi', 'CSS (Scss)'],
+    date: 'May 2, 2022',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Todo App',
     description: '',
     image:
@@ -102,9 +129,10 @@ export const projects = [
     source: 'https://github.com/mucahittasan/React-TodoApp',
     demo: 'https://precious-brioche-e534d7.netlify.app/',
     technologies: ['React.js', 'CSS'],
+    date: ' Apr 3, 2022',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Freelancer Website',
     description: '',
     image:
@@ -112,5 +140,6 @@ export const projects = [
     source: 'https://github.com/mucahittasan/Freelancer-Website',
     demo: 'https://wonderful-swan-fb6b2a.netlify.app/index.html',
     technologies: ['HTML', 'CSS (Scss)', 'Javascript'],
+    date: 'Apr 12, 2022',
   },
 ]
