@@ -29,13 +29,14 @@ const HomePage = () => {
             Frontend Software Engineer
           </span>{' '}
           and i have been trying to improve myself in the web field for{' '}
-          <span>4 years</span>. Until now, I have done many projects related to
+          <span>5 years</span>. Until now, I have done many projects related to
           this field as much as I can and added them to my github account. I
           generally worked with <span>Html</span>, <span>Css</span>,{' '}
           <span>Javascript</span>, <span>React.js</span>,{' '}
           <span>React Native</span>, <span>Redux Toolkit</span>,{' '}
-          <span>Zustand</span>, <span>Next.js</span>, <span>NextAuth</span>,{' '}
-          <span>Typescript</span>, <span>Scss(Sass)</span>,{' '}
+          <span>Zustand</span>, <span>Next.js (SSR, CSR)</span>,{' '}
+          <span>NextAuth</span>, <span>Typescript</span>,,<span>Zod</span>{' '}
+          <span>Scss(Sass)</span>, <span>Storybook</span>,{' '}
           <span>Tailwindcss</span>, <span>Bootstrap</span>, <span>Nodejs</span>,{' '}
           <span>Express.js</span>, <span>Prisma</span>, <span>MongoDb</span> and{' '}
           <span>Figma</span> technologies.

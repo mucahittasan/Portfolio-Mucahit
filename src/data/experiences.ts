@@ -3,6 +3,7 @@ export type Experience = {
   company_name: string
   technologies: string[]
   about_job: string[]
+  logo: string
   work_time: {
     start: string
     end: string
@@ -11,6 +12,25 @@ export type Experience = {
 }
 
 export const experiences = [
+  {
+    job_title: 'Frontend Sofwtare Engineer',
+    company_name: 'Doğuş Teknoloji',
+    technologies: [
+      'React.js',
+      'Next.js (SSR, CSR)',
+      'Typescript',
+      'Tailwindcss',
+      'Storybook',
+      'Azure DevOps',
+      'Figma',
+    ],
+    about_job: [],
+    work_time: {
+      start: 'August 2024',
+      end: 'Present',
+    },
+    logo: '/image/dogus_teknoloji_logo.jpeg',
+  },
   {
     job_title: 'Frontend Sofwtare Engineer',
     company_name: '777 Sense Labs',
@@ -32,8 +52,9 @@ export const experiences = [
     ],
     work_time: {
       start: 'November 2023',
-      end: 'Present',
+      end: 'August 2024',
     },
+    logo: '/image/777_sense_labs_logo.jpeg',
   },
   {
     job_title: 'Frontend Sofwtare Engineer',
@@ -50,6 +71,7 @@ export const experiences = [
       end: 'October 2023',
       total: '1.7 Years',
     },
+    logo: '/image/educational_networks_inc__logo.jpeg',
   },
   {
     job_title: 'Frontend Sofwtare Engineer',
@@ -65,5 +87,6 @@ export const experiences = [
       end: 'May 2023',
       total: '6 Month',
     },
+    logo: '/image/kedi_games_logo.jpeg',
   },
 ]

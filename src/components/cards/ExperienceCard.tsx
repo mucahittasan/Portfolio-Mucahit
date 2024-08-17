@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Experience } from '../../data/experiences'
 
 const ExperienceCard = ({ item }: { item: Experience }) => {
@@ -5,9 +6,18 @@ const ExperienceCard = ({ item }: { item: Experience }) => {
     <div className="border-b border-b-gray-700 dark:border-b-gray-300 pb-4">
       <div className="flex flex-col items-start gap-y-2 mb-4">
         <article className="flex sm:flex-row flex-col sm:items-center gap-x-2">
-          <h3 className="md:text-2xl text-xl font-bold dark:text-gray-700 white">
-            {item.company_name}
-          </h3>
+          <div className="flex items-center gap-x-4">
+            <Image
+              src={item.logo}
+              alt={item.company_name}
+              width={50}
+              height={50}
+              className="rounded-full"
+            />
+            <h3 className="md:text-2xl text-xl font-bold dark:text-gray-700 white">
+              {item.company_name}
+            </h3>
+          </div>
           <p className="text-gray-400">
             ({item.work_time.start} - {item.work_time.end}){' '}
             <span className="text-gray-500 font-semibold">

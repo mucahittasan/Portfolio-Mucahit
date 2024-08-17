@@ -22,23 +22,6 @@ const NavbarMenuModal = () => {
           <li
             className={` w-full ${
               toggleMenu.isOpen
-                ? 'translate-y-0 opacity-[1]'
-                : 'opacity-0 translate-y-[20px]'
-            }`}
-          >
-            <Link
-              onClick={() => toggleMenu.onClose()}
-              className={`navbar-item w-full before:from-darkPink flex justify-center text-lg dark:text-darkText text-whiteText hover:text-whiteText font-bold ${
-                activeSegment === 'blog' && 'before:w-full before:bg-darkBlue'
-              }`}
-              href="/blog"
-            >
-              Blog
-            </Link>
-          </li>
-          <li
-            className={` w-full ${
-              toggleMenu.isOpen
                 ? 'translate-y-0 opacity-[1] '
                 : 'opacity-0 translate-y-[20px]'
             }`}
