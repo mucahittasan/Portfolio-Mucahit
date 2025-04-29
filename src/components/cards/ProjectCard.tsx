@@ -33,6 +33,22 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             <span>{project.date}</span>
           </div>
         </div>
+        {project.links && project.links.length > 0 && (
+          <div className="project-link-list mt-3 flex flex-wrap gap-2">
+            {project.links.map((link, idx) => (
+              <a
+                key={idx}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link-item px-3 py-1 rounded font-semibold transition-all flex items-center gap-1"
+              >
+                <span className="project-link-icon">🔗</span>
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
       </article>
     </Link>
   )

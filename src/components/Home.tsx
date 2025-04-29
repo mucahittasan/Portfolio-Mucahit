@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { HiCursorClick } from 'react-icons/hi'
-
 import { motion as m } from 'framer-motion'
 import Lottie from 'lottie-react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
@@ -11,41 +10,66 @@ import animationData from '../../public/animations/coderr.json'
 const HomePage = () => {
   return (
     <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.75, ease: 'easeOut' }}
-      initial={{ opacity: 0, translateY: 50 }}
-      animate={{ opacity: 1, translateY: 0 }}
       className="mt-16"
     >
       <div className="flex flex-col items-start">
-        <div>
-          <h2 className="home-title gradient-text ">
+        <m.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          <h2 className="home-title gradient-text">
             Hi, I&apos;m Mucahit Tasan
           </h2>
-        </div>
+        </m.div>
 
-        <p className="home-paragraph">
+        <m.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
+          className="home-paragraph"
+        >
           I&apos;m a{' '}
           <span className="text-pinkColor font-bold">
-            Frontend Software Engineer
+            Senior Frontend Engineer
           </span>{' '}
-          and i have been trying to improve myself in the web field for{' '}
-          <span>5 years</span>. Until now, I have done many projects related to
-          this field as much as I can and added them to my github account. I
-          generally worked with <span>Html</span>, <span>Css</span>,{' '}
-          <span>Javascript</span>, <span>React.js</span>,{' '}
-          <span>React Native</span>, <span>Redux Toolkit</span>,{' '}
-          <span>Zustand</span>, <span>Next.js (SSR, CSR)</span>,{' '}
-          <span>NextAuth</span>, <span>Typescript</span>,,<span>Zod</span>{' '}
-          <span>Scss(Sass)</span>, <span>Storybook</span>,{' '}
-          <span>Tailwindcss</span>, <span>Bootstrap</span>, <span>Nodejs</span>,{' '}
-          <span>Express.js</span>, <span>Prisma</span>, <span>MongoDb</span> and{' '}
-          <span>Figma</span> technologies.
-        </p>
+          with 5+ years of experience in developing high-performance web
+          applications and interactive user interfaces. I specialize in the
+          React ecosystem with expertise in building scalable frontend
+          architectures. I have a strong background in modern JavaScript
+          frameworks and responsive design principles, complemented by hands-on
+          experience with gaming-related web applications.
+        </m.p>
 
-        <div className="flex items-center mt-12">
+        <m.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.5, ease: 'easeOut' }}
+          className="home-paragraph mt-4"
+        >
+          My technical expertise includes: <span>HTML</span>, <span>CSS</span>{' '}
+          (Sass, Bootstrap, Tailwind CSS), <span>JavaScript</span> (ES6+, ES7+),{' '}
+          <span>React</span> (React-Router, Formik, Yup, Redux Toolkit, Context
+          API, Zustand), <span>React Native</span>, <span>TypeScript</span>,{' '}
+          <span>Next.js</span> (SSR/SSG, NextAuth, Nuqs, Zod, TanStack Query),{' '}
+          <span>Node.js</span> (Express.js), <span>MongoDB</span>,{' '}
+          <span>Prisma</span>, <span>Drizzle</span>, <span>Supabase</span>,{' '}
+          <span>Figma</span>, <span>Storybook</span>, and <span>Photoshop</span>
+          .
+        </m.p>
+
+        <m.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut' }}
+          className="flex items-center mt-12"
+        >
           <Link
-            className=" btn btn-primary"
-            href="https://drive.google.com/file/d/14LqGWYO58L6WdOO53F87aS_GW57F5dCY/view?usp=sharing"
+            className="btn btn-primary"
+            href="https://drive.google.com/file/d/1kaVcOz2Svg4ViIev-bNDcHsjI16KbPCy/view?usp=sharing"
             target="_blank"
           >
             <HiCursorClick />
@@ -67,14 +91,21 @@ const HomePage = () => {
               <AiFillLinkedin />
             </Link>
           </div>
-        </div>
-        <Lottie
-          className="!w-full !h-96"
-          animationData={animationData}
-          loop
-          autoplay
-          style={{ width: 300, height: 300 }}
-        />
+        </m.div>
+        <m.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.9, ease: 'easeOut' }}
+          className="w-full"
+        >
+          <Lottie
+            className="!w-full !h-96"
+            animationData={animationData}
+            loop
+            autoplay
+            style={{ width: 300, height: 300 }}
+          />
+        </m.div>
       </div>
     </m.div>
   )

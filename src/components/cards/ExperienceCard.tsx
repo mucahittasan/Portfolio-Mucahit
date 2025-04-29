@@ -30,15 +30,39 @@ const ExperienceCard = ({ item }: { item: Experience }) => {
         </h4>
       </div>
       <ul className="md:ml-10 ml-4 flex flex-col gap-y-2">
-        {item.about_job.map((item, i) => (
-          <li
-            key={i}
-            className="list-disc text-gray-300 dark:text-gray-600 font-medium md:text-base text-sm"
-          >
-            {item}
-          </li>
-        ))}
+        {item.about_job.map((job, i) =>
+          job.includes('<a href=') ? (
+            <li
+              key={i}
+              className="list-disc text-gray-300 dark:text-gray-600 font-medium md:text-base text-sm"
+              dangerouslySetInnerHTML={{ __html: job }}
+            />
+          ) : (
+            <li
+              key={i}
+              className="list-disc text-gray-300 dark:text-gray-600 font-medium md:text-base text-sm"
+            >
+              {job}
+            </li>
+          ),
+        )}
       </ul>
+      {item.links && item.links.length > 0 && (
+        <div className="experience-link-list mt-3 flex flex-wrap gap-2">
+          {item.links.map((link, idx) => (
+            <a
+              key={idx}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="experience-link-item px-3 py-1 rounded font-semibold transition-all flex items-center gap-1 text-purple-500 hover:underline"
+            >
+              <span className="experience-link-icon">🔗</span>
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
       <h4 className="font-bold mt-4 md:text-xl text-lg dark:text-gray-700 white">
         Technologies
       </h4>

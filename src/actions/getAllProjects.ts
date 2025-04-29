@@ -5,10 +5,11 @@ export interface ProjectsLists {
   title: string
   description: string
   image: string
-  source: string
-  demo: string
+  source?: string
+  demo?: string
   technologies: string[]
   date: string
+  links?: { name: string; url: string }[]
 }
 
 export default function getAllProjects() {

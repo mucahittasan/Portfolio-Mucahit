@@ -1,67 +1,76 @@
 export const projects = [
   {
     id: 0,
-    title: 'Job Finding App',
-    description: '',
-    image:
-      'https://github.com/mucahittasan/Job-Finding-App/assets/88967412/9379de4b-c15a-4615-a275-ffe26465c95a',
-    source: 'https://github.com/mucahittasan/Job-Finding-App',
-    demo: 'https://job-finding-app-mucahit.vercel.app/',
+    title: 'VDF Insurance Platform',
+    description:
+      'Lead the Frontend development and launch of the Volkswagen Doğuş Finans (VDF) Insurance platform. Architected the Frontend with Next.js and TypeScript, integrated Strapi as a headless CMS, and managed the team to deliver a robust, production-ready insurance solution for Volkswagen’s official insurance company in Turkey.',
+    image: '/image/vdf-sigorta.png',
+    source: 'https://vdfsigorta.com.tr',
+    demo: 'https://vdfsigorta.com.tr',
     technologies: [
       'Next.js',
-      'Typescript',
-      'React Hook Form',
-      'React Query',
+      'TypeScript',
+      'Strapi',
       'Zustand',
-      'Js Cookie',
-      'Framer Motion',
-      'Tailwindcss',
-      'Zod',
+      'TanStack Query',
+      'Tailwind CSS',
+      'Azure Boards',
     ],
-    date: 'March 22, 2024',
+    date: 'March 2025',
   },
   {
     id: 1,
+    title: 'Rick and Morty App',
+    description:
+      'Architected and developed an interactive character explorer using Next.js 15 and TypeScript. Implemented engaging 3D card animations and transitions using Framer Motion. Built advanced filtering system with URL-based state management using nuqs. Optimized performance with React Query for data fetching and Zustand for state management. Achieved 90+ Lighthouse scores through SSR and performance optimizations.',
+    image: '/image/rick_and_morty_image.png',
+    source: 'https://github.com/mucahittasan/rick-and-morty',
+    demo: 'https://rick-and-morty-wheat-seven.vercel.app/',
+    technologies: [
+      'Next.js 15',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+      'React Query',
+      'Zustand',
+      'shadcn/ui',
+      'nuqs',
+    ],
+    date: 'January 2025',
+  },
+  {
+    id: 2,
     title: 'Threads App',
     description:
-      'Threads App is a modern, responsive web application crafted using cutting-edge technologies. Developed with Next.js, TypeScript, Tailwind CSS, Clerk, Webhook, Zod, UploadThing, and MongoDB, this application stands out with its user-friendly interface and functionality.',
+      'Developed modern social platform clone using Next.js 13. Implemented authentication using Clerk and file uploads with UploadThing. Built responsive UI with Tailwind CSS and server-side rendering.',
     image:
       'https://github.com/mucahittasan/Threads-App/assets/88967412/ed0e010d-a0eb-4d51-8fc8-1cb8e0aa0311',
     source: 'https://github.com/mucahittasan/Threads-App',
     demo: 'https://threads-app-navy-seven.vercel.app/',
     technologies: [
       'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Clerk',
-      'Webhook',
-      'UploadThing',
-      'Zod',
+      'TypeScript',
       'MongoDB',
+      'Tailwind CSS',
+      'Clerk',
+      'UploadThing',
     ],
-    date: 'Jan 20, 2024',
+    date: 'January 2024',
   },
   {
-    id: 2,
+    id: 3,
     title: 'E Commerce',
     description:
-      'In this project, I wanted to use the react and redux toolkit, which I always use, together with typescript, and I wanted to make an e-commerce application using them. In this project, I tried to do operations such as listing products, seeing product details, adding/removing to cart, adding/removing to favorites, searching for products, ordering the products in the basket. My project is fully responsive, I hope you like it :)',
+      'Built full-featured e-commerce platform using React and Redux Toolkit. Implemented TypeScript for enhanced code reliability. Features include product management, cart operations, favorites, and search functionality.',
     image:
       'https://user-images.githubusercontent.com/88967412/235976385-3b4b5f76-b537-48e1-a1d3-406241f0a912.png',
     source: 'https://github.com/mucahittasan/E-Commerce-MERN',
     demo: 'https://e-commerce-app-alpha-brown.vercel.app/',
-    technologies: [
-      'React.js',
-      'Typescript',
-      'Tailwindcss',
-      'Redux Toolkit',
-      'Node.js',
-      'MongoDB',
-    ],
-    date: 'Jun 06, 2023',
+    technologies: ['React.js', 'TypeScript', 'Tailwind CSS', 'Redux Toolkit'],
+    date: 'June 2023',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Airbnb Clone',
     description:
       "I made an airbnb project with 'Code with antonio'. How to use modals in general in my project, how to use nextjs and prisma together, how to use nextAuth package of nextjs, how to signIn with github or google, how to use nextjs together with typescript, how to optimize operations such as map and calendar and integrate them into the project. I've worked with things and I think it's a pretty cool project.",
@@ -79,7 +88,7 @@ export const projects = [
     date: 'May 1, 2023',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Twitter Clone',
     description:
       'In this project, i made a twitter clone app. I tried to emulate exactly like twitter and i think i made it. In this app, you can login, signup, logout, share post, delete post, comment to post and more things. I hope you like this project. ',
@@ -97,7 +106,7 @@ export const projects = [
     date: 'May 2, 2023',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Example Portfolio',
     description:
       'I made this project to introduce myself, to show the talents I have, to introduce the projects I have done, and to make it easy for people to know about me. I have done it so that they can have knowledge in a way.',
@@ -109,7 +118,7 @@ export const projects = [
     date: 'May 5, 2022',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Weather App',
     description:
       'In this project I worked with React, I used the openweather API and using the axios library, I tried to show the 3-day weather condition of that city according to the city name that the user entered in the input, according to the data from the API',
@@ -121,7 +130,7 @@ export const projects = [
     date: 'May 2, 2022',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Todo App',
     description: '',
     image:
@@ -132,7 +141,7 @@ export const projects = [
     date: ' Apr 3, 2022',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Freelancer Website',
     description: '',
     image:
