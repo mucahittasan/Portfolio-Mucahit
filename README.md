@@ -1,31 +1,116 @@
-<h1 align="center"> Mucahit | Stealim </h1>
+# Mucahit Tasan - Portfolio Website
 
-<div align="center">
-  
-  <a href="https://mucahit-tasan.vercel.app/" target="_blank">↪️ Demo</a>
-  <br />
-  <br />
+A modern, responsive portfolio website built with Next.js 14, showcasing my professional experience, projects, and technical expertise.
 
-</div> 
+## 🚀 Features
 
-<div align="center">
-  <img width="900" src = 'https://github.com/mucahittasan/Portfolio-Mucahit/assets/88967412/e047cadd-e4b4-4540-a549-85cd9e2327a3' />
-   <img width="900" src = 'https://github.com/mucahittasan/Portfolio-Mucahit/assets/88967412/18948126-faca-4ac8-8e0b-c7056578774f' />
-</div>
+- **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
+- **Responsive Design**: Fully responsive layout for all devices
+- **Dark/Light Mode**: Seamless theme switching with smooth transitions
+- **Interactive Animations**: Engaging animations using Framer Motion
+- **Performance Optimized**: High Lighthouse scores and optimized loading
+- **SEO Friendly**: Built-in SEO optimization with Next.js
+- **Modern UI/UX**: Clean, professional design with smooth interactions
 
-<h2> ✨ About The Project</h2>
+## 🛠️ Technologies Used
 
-- Responsive
-- Dark Mode
-- In this project, I tried to make the website that I had designed for myself more beautiful and using new technologies, and I think that a much more beautiful project has emerged. In my project, you can find information about me, the projects I have done, my social media links and much more.
+- **Frontend Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Animation**: Lottie
+- **State Management**: React Context
+- **Form Handling**: React Hook Form
+- **Validation**: Zod
+- **API Integration**: TanStack Query
+- **Deployment**: Vercel
 
-<h2> 📌 Build With</h2>
+## 📦 Project Structure
 
-- [Next.js](https://nextjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Tailwindcss](https://tailwindcss.com/)
+```
+src/
+├── app/                 # Next.js app directory
+├── components/          # Reusable components
+│   ├── cards/          # Card components
+│   ├── experience/     # Experience related components
+│   ├── modals/         # Modal components
+│   └── navbar/         # Navigation components
+├── data/               # Static data
+├── hooks/              # Custom hooks
+└── public/             # Static assets
+```
 
+## 🎨 Design System
 
-<h2> 📧 Contact </h2>
+- **Colors**:
 
-Mucahit Tasan - [Linkedin](https://www.linkedin.com/in/mucahittasan) - [E-mail](mailto:mucahittasan0@gmail.com)
+  - Primary: `#81D6FF` (Blue)
+  - Secondary: `#E781FC` (Pink)
+  - Dark Mode: Custom dark gradient
+  - Light Mode: Custom light gradient
+
+- **Typography**:
+  - Primary Font: Poppins
+  - Secondary Font: Orbitron
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/mucahittasan/portfolio.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📝 Recent Updates
+
+- Implemented smooth page transitions
+- Added dark/light mode toggle
+- Enhanced mobile responsiveness
+- Optimized performance with Next.js 14
+- Added interactive animations with Framer Motion
+- Improved SEO optimization
+
+## 🎯 Future Improvements
+
+- [ ] Add blog section
+- [ ] Implement contact form
+- [ ] Add project filtering system
+- [ ] Enhance animations
+- [ ] Add internationalization support
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **Email**: [mucahittasan@outlook.com](mailto:mucahittasan@outlook.com)
+- **LinkedIn**: [Mucahit Tasan](https://linkedin.com/in/mucahittasan)
+- **GitHub**: [mucahittasan](https://github.com/mucahittasan)
+
+---
+
+Made with ❤️ by Mucahit Tasan
