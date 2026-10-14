@@ -1,76 +1,146 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fafaf9;
+  --foreground: #0c0c0e;
+  --muted: #5f5f6a;
+  --subtle: #8e8e98;
+  --surface: rgb(0 0 0 / 0.025);
+  --surface-strong: rgb(0 0 0 / 0.05);
+  --border: rgb(0 0 0 / 0.08);
+  --border-strong: rgb(0 0 0 / 0.16);
+  --accent-from: #0284c7;
+  --accent-to: #c026d3;
+  --glow: rgb(2 132 199 / 0.12);
+  --grid-line: rgb(0 0 0 / 0.05);
+}
+
+.dark {
+  --background: #08080a;
+  --foreground: #ededef;
+  --muted: #9a9aa4;
+  --subtle: #63636d;
+  --surface: rgb(255 255 255 / 0.03);
+  --surface-strong: rgb(255 255 255 / 0.06);
+  --border: rgb(255 255 255 / 0.08);
+  --border-strong: rgb(255 255 255 / 0.16);
+  --accent-from: #81d6ff;
+  --accent-to: #e781fc;
+  --glow: rgb(129 214 255 / 0.1);
+  --grid-line: rgb(255 255 255 / 0.04);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent-from: var(--accent-from);
+  --color-accent-to: var(--accent-to);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+  --animate-aurora: aurora 18s ease-in-out infinite alternate;
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes aurora {
+    0% {
+      transform: translate3d(-10%, -6%, 0) rotate(0deg) scale(1);
+    }
+    50% {
+      transform: translate3d(8%, 4%, 0) rotate(20deg) scale(1.15);
+    }
+    100% {
+      transform: translate3d(-4%, 10%, 0) rotate(-12deg) scale(0.95);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(2.6);
+      opacity: 0;
+    }
+  }
+}
 
 @layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-darkGradientBg text-white dark:bg-whiteGradientBg dark:text-whiteText transition cursor-auto overflow-x-hidden;
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    @apply bg-pinkColor text-darkText;
+    background: color-mix(in srgb, var(--accent-to) 35%, transparent);
   }
 
-  body::-webkit-scrollbar {
-    width: 12px;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-from rounded-sm;
   }
 
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-t from-pinkColor to-transparent;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
+}
 
-  .navbar-item {
-    @apply font-semibold p-2 text-darkText transition dark:text-whiteText relative before:absolute
-    before:bottom-0 before:left-0 before:w-6 before:rounded-2xl before:h-[2px] before:bg-gradient-to-r before:from-pinkColor hover:text-white
-    before:to-transparent hover:before:bg-blueColor before:transition-all before:duration-300 hover:before:w-full;
-  }
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
 
-  .home-title {
-    @apply font-bold mb-12 text-[2rem] md:text-5xl lg:text-6xl w-full sm:text-start text-center font-poppins;
-  }
+@utility text-gradient {
+  background-image: linear-gradient(100deg, var(--accent-from), var(--accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-blueColor to-pinkColor inline-block text-transparent bg-clip-text;
-  }
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
 
-  .gradient-dark-text {
-    @apply bg-gradient-to-r from-darkBlue to-darkPink inline-block text-transparent bg-clip-text;
-  }
+@utility mask-fade-y {
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, #000 40%, transparent 100%);
+}
 
-  .home-paragraph {
-    @apply md:text-base lg:text-lg font-semibold text-gray-400 dark:text-gray-600 w-full;
-  }
-
-  .home-paragraph span:not(:first-child) {
-    @apply text-white sm:text-start text-center font-bold dark:text-whiteText;
-  }
-
-  .btn {
-    @apply text-center font-bold text-darkText flex items-center gap-2 py-2 px-8 outline-none;
-  }
-
-  .btn-primary {
-    @apply rounded-md transition-all hover:scale-105 bg-gradient-to-br from-darkBlue to-darkPink
-     text-darkText dark:from-[#131313] dark:to-[#474747] dark:bg-gradient-to-l;
-  }
-
-  .primary-title {
-    @apply font-bold md:text-5xl text-4xl  relative;
-  }
-
-  .primary-title h3:first-child {
-    @apply absolute whitespace-nowrap blur-[2px] md:-top-6 -top-1 -left-4 md:-left-8 opacity-[0.1] pointer-events-none md:text-[5rem] sm:text-[4rem] text-[3rem];
-  }
-
-  .primary-title-dark {
-    @apply bg-gradient-to-r from-darkBlue to-darkPink inline-block text-transparent bg-clip-text min-h-[60px];
-  }
-
-  p code {
-    @apply !text-white bg-gray-500;
-  }
-
-  .technologies span:last-child span {
-    display: none;
-  }
+@utility mask-fade-x {
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
 }
