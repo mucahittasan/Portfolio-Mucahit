@@ -33,3 +33,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local tooling
+/.cache/
+/.claude/
+debug-index-state.txt

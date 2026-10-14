@@ -1,116 +1,57 @@
-# Mucahit Tasan - Portfolio Website
+# Mucahit Tasan — Portfolio
 
-A modern, responsive portfolio website built with Next.js 14, showcasing my professional experience, projects, and technical expertise.
+Personal portfolio of Mucahit Tasan, Frontend Software Engineer. Live at [mucahit-tasan.vercel.app](https://mucahit-tasan.vercel.app).
 
-## 🚀 Features
+## Stack
 
-- **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
-- **Responsive Design**: Fully responsive layout for all devices
-- **Dark/Light Mode**: Seamless theme switching with smooth transitions
-- **Interactive Animations**: Engaging animations using Framer Motion
-- **Performance Optimized**: High Lighthouse scores and optimized loading
-- **SEO Friendly**: Built-in SEO optimization with Next.js
-- **Modern UI/UX**: Clean, professional design with smooth interactions
+- **Next.js 16** (App Router, React Server Components, fully static output)
+- **React 19** + **TypeScript**
+- **Tailwind CSS v4** (CSS-first theme tokens in `src/app/globals.css`)
+- **Motion** (lazy-loaded features, respects `prefers-reduced-motion`)
+- **next-themes** for dark / light mode, **lucide-react** for icons
 
-## 🛠️ Technologies Used
+Built-in SEO: per-page metadata, canonical URLs, `sitemap.xml`, `robots.txt`, a generated Open Graph image and Person JSON-LD.
 
-- **Frontend Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: React Icons
-- **Animation**: Lottie
-- **State Management**: React Context
-- **Form Handling**: React Hook Form
-- **Validation**: Zod
-- **API Integration**: TanStack Query
-- **Deployment**: Vercel
-
-## 📦 Project Structure
+## Structure
 
 ```
 src/
-├── app/                 # Next.js app directory
-├── components/          # Reusable components
-│   ├── cards/          # Card components
-│   ├── experience/     # Experience related components
-│   ├── modals/         # Modal components
-│   └── navbar/         # Navigation components
-├── data/               # Static data
-├── hooks/              # Custom hooks
-└── public/             # Static assets
+├── app/                    # Routes: /, /projects, /projects/[slug], /experience, 404, SEO files
+├── components/
+│   ├── layout/             # Navbar, footer, theme toggle, background
+│   ├── sections/           # Home page sections (hero, work, expertise, contact…)
+│   ├── projects/           # Project card, cover, grid with filters, links
+│   ├── experience/         # Timeline entry + scroll progress rail
+│   └── ui/                 # Primitives: Reveal, SpotlightCard, ButtonLink, Tag…
+├── data/                   # All content lives here
+│   ├── site.ts             # Name, links, stats, expertise, skills, education
+│   ├── experience.ts       # Work history
+│   └── projects.ts         # Projects
+└── lib/                    # Helpers (cn, date formatting)
 ```
 
-## 🎨 Design System
+## Editing content
 
-- **Colors**:
+All copy comes from `src/data/*`. No component changes are needed to update content.
 
-  - Primary: `#81D6FF` (Blue)
-  - Secondary: `#E781FC` (Pink)
-  - Dark Mode: Custom dark gradient
-  - Light Mode: Custom light gradient
+**Adding a project screenshot:** put the image in `public/image/projects/` (16:10 works best, e.g. 1600×1000) and set `image` on the project in `src/data/projects.ts`:
 
-- **Typography**:
-  - Primary Font: Poppins
-  - Secondary Font: Orbitron
+```ts
+image: '/image/projects/craftolio.png',
+```
 
-## 🚀 Getting Started
+Projects without an `image` render a generated cover tinted by their `hue`.
 
-1. Clone the repository:
+**Resume:** replace `public/mucahit-tasan-cv.pdf`.
 
-   ```bash
-   git clone https://github.com/mucahittasan/portfolio.git
-   ```
+**Availability badge:** toggle `available` in `src/data/site.ts`.
 
-2. Install dependencies:
+## Development
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Run the development server:
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 📝 Recent Updates
-
-- Implemented smooth page transitions
-- Added dark/light mode toggle
-- Enhanced mobile responsiveness
-- Optimized performance with Next.js 14
-- Added interactive animations with Framer Motion
-- Improved SEO optimization
-
-## 🎯 Future Improvements
-
-- [ ] Add blog section
-- [ ] Implement contact form
-- [ ] Add project filtering system
-- [ ] Enhance animations
-- [ ] Add internationalization support
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-- **Email**: [mucahittasan@outlook.com](mailto:mucahittasan@outlook.com)
-- **LinkedIn**: [Mucahit Tasan](https://linkedin.com/in/mucahittasan)
-- **GitHub**: [mucahittasan](https://github.com/mucahittasan)
-
----
-
-Made with ❤️ by Mucahit Tasan
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run lint
+npm run typecheck
+npm run build
+```
